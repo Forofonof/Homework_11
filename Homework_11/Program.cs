@@ -4,7 +4,10 @@
 {
     static void Main(string[] args)
     {
-        int rubToUsd = 85; int usdToRub = 80; int rubToEur = 95; int eurToRub = 90;
+        int rubToUsd = 85; 
+        int usdToRub = 80; 
+        int rubToEur = 95; 
+        int eurToRub = 90;
         double balanceRub = 215000;
         double balanceUsd = 4500;
         double balanceEur = 5600;
@@ -68,12 +71,12 @@
                     break;
                 case "4":
                     Console.WriteLine($"Сколько желаете обменять долларов? Баланс: {balanceUsd} долларов.");
-                    Console.WriteLine($"Курс обмена: {usdToRub} рублей за один доллар .");
+                    Console.WriteLine($"Курс обмена: {usdToRub} рублей за один доллар.");
                     currencyCount = Convert.ToInt32(Console.ReadLine());
                     if (balanceUsd >= currencyCount)
                     {
                         balanceUsd -= currencyCount;
-                        balanceRub += currencyCount * usdToRub;
+                        balanceRub += currencyCount / usdToRub;
 
                         Console.WriteLine($"Сделка успешно завершена! Ваш баланс: {balanceUsd} Долларов. {balanceRub} рублей.");
                     }
